@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Web_Site_2._0.Models.Van_Students>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutThird.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JoiningDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndingDt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student_Info.Std_FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VanDriver_Info.P_ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JoiningDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndingDt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student_Info.Std_FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VanDriver_Info.P_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SV_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SV_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SV_ID })
+        </td>
+    </tr>
+}
+
+</table>

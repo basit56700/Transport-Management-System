@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1b35fb2c46614526be9e056f0a1db3fc" Name="Diagram1">
+        <EntityTypeShape EntityType="TransportModel.DeptInfo" Width="1.5" PointX="2.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.Driver_Info" Width="1.5" PointX="2.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.Routes_Info" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.Student_Info" Width="1.5" PointX="5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.Van_Students" Width="1.5" PointX="7.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.VanDriver_Info" Width="1.5" PointX="5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.Vehicle_Info" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.VehicleRoute" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.Admin_Password" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="TransportModel.FK_Student_Info_DeptInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportModel.FK_VanDriver_Info_Driver_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportModel.FK_VehicleRoute_Routes_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportModel.FK_Van_Students_Student_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportModel.FK_Van_Students_VanDriver_Info" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportModel.FK_VehicleRoute_Vehicle_Info" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

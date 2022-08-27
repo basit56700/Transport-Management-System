@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Web_Site_2._0.Models.Student_Info>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutThird.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Std_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Std_FirstName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Std_Semester)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Std_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Std_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdmissionDt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Std_Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeptInfo.DeptName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Std_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Std_FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Std_Semester)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Std_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Std_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdmissionDt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Std_Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeptInfo.DeptName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Std_Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Std_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Std_Id })
+        </td>
+    </tr>
+}
+
+</table>

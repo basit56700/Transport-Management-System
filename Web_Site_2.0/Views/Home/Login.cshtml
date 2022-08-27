@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutSecond.cshtml";
+}
+
+
+<section id="hero" class="d-flex align-items-center">
+
+
+    <form action="/Home/AuthenticateUser" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <label> Username</label>
+                        <input ID="username" type="text" name="username" placeholder="Enter Username" CssClass="form-control" runat="server" />
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input ID="password" type="password" name="password" placeholder="Password" CssClass="form-control" runat="server" />
+                    </div>
+                    <div>
+
+                        @if (TempData["Error"] != null)
+                        {
+                            <p>@TempData["Error"]</p>
+                        }
+                        
+                        <button type="submit" >Login</button>
+                        <button type="button"onclick="window.location= '@Url.Action( "Create", "Student")'">Signup</button>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="~/Content/img/hero-img.png" class="img-fluid animated" alt="">
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+</section><!-- End Hero -->

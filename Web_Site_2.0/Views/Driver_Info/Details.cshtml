@@ -1,0 +1,51 @@
+﻿@model Web_Site_2._0.Models.Driver_Info
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutSecond.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Driver_Info</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.D_FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Driver_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Driver_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_Cnic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_Cnic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Driver_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

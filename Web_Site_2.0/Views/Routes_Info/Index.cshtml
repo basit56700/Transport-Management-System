@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Web_Site_2._0.Models.Routes_Info>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutThird.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Route_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Route_District)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Route_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Route_District)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RouteID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RouteID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RouteID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,58 @@
+﻿
+@model Web_Site_2._0.Models.Student_Info
+@{
+
+    Layout = "~/Views/Shared/_LayoutFourth.cshtml";
+}
+
+    <!-- ======= Student Section ======= -->
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-7">
+            <div class="card p-2 text-center">
+                <div class="row">
+                    <div class="col-md-7 border-right no-gutters">
+                        <div class="py-3">
+                            <h2>Student Information</h2>
+                            <img src="https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-1/270228962_4979617725416095_978007526381350748_n.jpg?stp=dst-jpg_s200x200&_nc_cat=105&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeETglY2YyJmfuiV_HOs_5QJDpX1bX9rnwAOlfVtf2ufACqD-SF7r_T0ZWpurKSaOzltRGnh1I3kflrigCcCqKpA&_nc_ohc=RMXbW7r3qOsAX8XZvNo&_nc_ht=scontent.fkhi2-2.fna&oh=00_AT-6BgerFL6BnKYrUySXnerveCk_Otq3IbNI-58IXH0uHA&oe=62F4342B" width="100" class="rounded-circle">
+                            <h4 class="text-secondary"> @Html.DisplayFor(model => model.Std_FirstName)</h4>
+                            
+                            <div class="stats">
+                                <table class="table table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex flex-column"> <span class="text-left head">Address</span> <span class="text-left bottom">@Html.DisplayFor(model => model.Std_Address)</span> </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex flex-column"> <span class="text-left head">Semester</span> <span class="text-left bottom">@Html.DisplayFor(model => model.Std_Semester)</span> </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex flex-column"> <span class="text-left head"></span> <span class="text-left bottom">@Html.DisplayFor(model => model.DeptInfo)</span> </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="px-3"><button type="button" onclick="window.location= '@Url.Action( "Edit", "Home")'" class="btn btn-primary btn-block">Edit</button></div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="py-3">
+                            <div> <span class="d-block head">Home Address</span> <span class="bottom">123 Broadway,New York,NY,10012</span> </div>
+                            <div class="mt-4"> <span class="d-block head">Mobile Phone#</span> <span class="bottom">917 (543)-1234</span> </div>
+                            <div class="mt-4"> <span class="d-block head">Home Phone#</span> <span class="bottom">212 (213)-1234</span> </div>
+                            <div class="mt-4"> <span class="d-block head">Work Phone#</span> <span class="bottom">718 (702)-9876</span> </div>
+                            <div class="mt-4"> <span class="d-block head">Email</span> <span class="bottom">j.smith@gmail.com</span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

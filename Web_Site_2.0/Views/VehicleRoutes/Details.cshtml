@@ -1,0 +1,43 @@
+﻿@model Web_Site_2._0.Models.VehicleRoute
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutSecond.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VehicleRoute</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Routes_Info.Route_Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Routes_Info.Route_Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle_Info.Van_Licence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle_Info.Van_Licence)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VR_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

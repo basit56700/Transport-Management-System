@@ -1,0 +1,81 @@
+﻿@model Web_Site_2._0.Models.Student_Info
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutSecond.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Student_Info</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Std_FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Std_FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Std_Semester)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Std_Semester)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Std_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Std_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Std_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Std_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdmissionDt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdmissionDt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Std_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Std_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptInfo.DeptName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptInfo.DeptName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

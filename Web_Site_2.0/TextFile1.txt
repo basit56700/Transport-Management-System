@@ -1,0 +1,8 @@
+﻿Template integration
+1) Downloaded Arsha template https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+2) Copied CS js and vendor folder into content folder 
+3) Added bootstrap links (header, footer, script) into layout page 
+4) Copied index.html -> Arsha (body remaining part) into projects index.cshtml 
+5) Changed all the links in index.html (assets/css... -> Content/css)
+
+Login page 
